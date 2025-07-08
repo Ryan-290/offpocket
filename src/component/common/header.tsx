@@ -16,7 +16,7 @@ export default function Header() {
   }
 
   return (
-    <div className='sticky top-0 z-50 w-full h-auto md:py-4 py-2 bg-white border-b-[1px] border-gray-200'>
+    <header className='sticky top-0 z-50 w-full h-auto md:py-4 py-2 bg-white border-b-[1px] border-gray-200'>
       <div className='max-w-7xl mx-auto px-4 flex justify-between items-center'>
         {/* 로고 */}
         <div className='flex relative md:w-[196px] w-[140px] md:h-[42px] h-[30px] shrink-0'>
@@ -35,14 +35,14 @@ export default function Header() {
           {/* 메뉴 버튼 */}
           <div className='flex justify-center space-x-8'>
             <MenuButton
-              href="/offcontent"
+              href="/offpick"
             >
-              비일상 LIST
+              OFF PICK !
             </MenuButton>
             <MenuButton
               href="/eating"
             >
-              맛집 LIST
+              OFF 먹킷리스트
             </MenuButton>
           </div>
           {/* 로그인 / 마이페이지 버튼 */}
@@ -67,6 +67,7 @@ export default function Header() {
           'fixed md:hidden top-0 right-0 w-[200px] h-full bg-[#FFE6D0] transform transition-transform duration-300 linear',
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}>
+          {/* close Button */}
           <div className='flex justify-end w-full h-[47px] px-4 '>
             <button
               onClick={toggleMenu}
@@ -74,16 +75,17 @@ export default function Header() {
               <FaTimes className="w-[20px] h-[20px] cursor-pointer" />
             </button>
           </div>
+          {/* 메뉴 리스트 */}
           <div className='flex flex-col px-8 py-4 space-y-4 text-sm'>
             <MenuButton
-              href="/offcontent"
+              href="/offpick"
             >
-              비일상 LIST
+              OFF PICK !
             </MenuButton>
             <MenuButton
               href="/eating"
             >
-              맛집 LIST
+              OFF 먹킷리스트
             </MenuButton>
             <MenuButton
               href="/login"
@@ -94,6 +96,6 @@ export default function Header() {
         </div>
 
       </div>
-    </div >
+    </header >
   )
 }
