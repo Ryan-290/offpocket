@@ -1,7 +1,6 @@
 import Features from "@/component/main/features";
 import PageIntro from "@/component/main/pageIntro";
 import Image from "next/image";
-import Link from "next/link";
 
 
 export default function Home() {
@@ -46,7 +45,8 @@ export default function Home() {
     {
       id: 1,
       to: "OFF PICK!",
-      title:"나만의 휴일, 어디로 떠나볼까요?",
+      href: "/offpick",
+      title: "나만의 휴일, 어디로 떠나볼까요?",
       desc: (
         <div>
           <p>OFF PICK!은 당신의 주말을 위한 큐레이션 공간입니다.</p>
@@ -59,7 +59,8 @@ export default function Home() {
     {
       id: 2,
       to: "OFF 먹킷리스트",
-            title:"한층 더 즐길 수 있는!",
+      href: "/eating",
+      title: "한층 더 즐길 수 있는!",
       desc: (
         <div>
           <p>비일상 속 경험을 더 특별하게 만드는 건, 그 하루의 한 끼.</p>
@@ -128,6 +129,7 @@ export default function Home() {
             src={item.image}
             title={item.title}
             desc={item.desc}
+            href={item.href}
           />
         ))}
       </section>

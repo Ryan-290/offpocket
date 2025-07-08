@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function Features( {key, alt, src, title, desc} ) {
+export default function Features( {alt, src, title, desc} ) {
 
   return (
-    <div key={key}>
+    <div>
       <div className='relative p-5 sm:p-10 md:p-15'>
         <div className='relative w-full aspect-[500/500]'>
           <Image
@@ -21,7 +21,6 @@ export default function Features( {key, alt, src, title, desc} ) {
       <div className='text-xs sm:text-base md:text-lg lg:text-xl text-center py-[2vw] px-2'>
         {desc}
       </div>
-
     </div>
   )
 }
