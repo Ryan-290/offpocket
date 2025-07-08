@@ -29,7 +29,7 @@ export default function PageIntro ( {key, linkto, src, title, desc} ) {
         <div>
           <Link
             href="/offpick"
-            className="flex space-x-1 md:space-x-2 items-center w-fit p-3 md:p-4 bg-[#C1776D] rounded-3xl text-white"
+            className="flex space-x-1 md:space-x-2 items-center w-fit p-3 md:p-4 bg-[#C1776D] rounded-3xl text-white transition-transform duration-200 hover:scale-105"
           >
             <div className='text-xs sm:text-base md:text-lg lg:text-xl'>
               {linkto}

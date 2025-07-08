@@ -10,7 +10,7 @@ export default function Features( {key, alt, src, title, desc} ) {
             alt={alt}
             src={src}
             fill
-            className="object-contain"
+            className="object-contain transition-transform duration-300 hover:scale-105"
           />
         </div>
       </div>
