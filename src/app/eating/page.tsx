@@ -6,7 +6,7 @@ export default function EatingPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 min-h-screen">
       <div className='flex flex-col md:flex-row py-10 sm:py-15 items-center'>
-        <div className='relative w-[200px] md:w-[400px] lg:w-[600px] aspect-[600/400]'>
+        <div className='relative w-[200px] md:w-[400px] lg:w-[600px] aspect-[600/400] rounded-4xl overflow-hidden'>
           <Image
             alt="updating"
             src="/updating.png"
