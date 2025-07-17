@@ -73,7 +73,7 @@ export default function Home() {
   ];
 
   return (
-    <div>
+    <main className="flex-1">
       {/* section 1 - 소개 */}
       <section className="pb-10">
         <div className='relative w-full aspect-[1800/800]'>
@@ -90,7 +90,7 @@ export default function Home() {
             <div className='text-xs sm:text-base md:text-lg lg:text-xl py-[3vw]'>
               <p>반복되는 하루에 OFF를 누르고,</p>
               <p>주말에는 새로운 장소와 감정, 경험을 담아보세요.</p>
-              <p>.off pocket은 전국 곳곳의 소소하고 특별한 비일상을 소개합니다.</p>
+              <p>OFF pocket은 전국 곳곳의 소소하고 특별한 비일상을 소개합니다.</p>
               <br />
               <p>지금은 내가 주인공이 되는 날,</p>
               <p>비일상 속 작은 여행이 당신을 기다리고 있어요.</p>
@@ -133,6 +133,6 @@ export default function Home() {
           />
         ))}
       </section>
-    </div>
+    </main>
   );
 }

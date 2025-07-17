@@ -64,7 +64,7 @@ export default function Header() {
         </div>
         {/* 모바일 메뉴 오픈 */}
         <div className={clsx(
-          'fixed md:hidden top-0 right-0 w-[200px] h-full bg-[#FFE6D0] transform transition-transform duration-300 linear',
+          'fixed md:hidden top-0 right-0 w-[200px] h-full bg-[#FFF5EF] transform transition-transform duration-300 linear',
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}>
           {/* close Button */}
