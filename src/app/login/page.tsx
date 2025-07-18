@@ -1,5 +1,8 @@
 "use client";
 
+import GoogleLoginButton from "@/component/login/googleLoginButton";
+import KakaoLoginButton from "@/component/login/kakaologin";
+import NaverLoginButton from "@/component/login/naverLoginButton";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
@@ -27,24 +30,13 @@ export default function loginPage() {
             <p>소소한 설렘의 시작</p>
           </div>
         </div>
-        <div className='flex flex-col space-y-2 w-full py-10'>
-          <button
-            className='flex justify-center items-center bg-yellow-300 rounded-4xl h-[60px] cursor-pointer'
-          >
-            카카오톡 시작하기
-          </button>
-          <button
-            className='flex justify-center items-center bg-green-300 rounded-4xl h-[60px] cursor-pointer'
-          >
-            네이버 시작하기
-          </button>
-          <button
-            className='flex justify-center items-center bg-white border-[1px] border-gray-200 rounded-4xl h-[60px] cursor-pointer'
-          >
-            구글 시작하기
-          </button>
+        <div className='flex flex-col space-y-4 w-full py-10'>
+          <KakaoLoginButton/>
+          <NaverLoginButton/>
+          <GoogleLoginButton/>
         </div>
-        <div className='flex flex-col space-y-4'>
+
+        {/* <div className='flex flex-col space-y-4'>
           <div className='flex space-x-2 items-center w-full text-gray-400 text-sm'>
             <hr  className="flex-grow border-t border-gray-300"/>
               또는 이메일 시작하기
@@ -68,7 +60,7 @@ export default function loginPage() {
           >
             시작하기
           </button>
-        </div>
+        </div> */}
       </div>
     </main>
   )
