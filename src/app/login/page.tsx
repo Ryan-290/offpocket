@@ -29,17 +29,17 @@ export default function loginPage() {
         </div>
         <div className='flex flex-col space-y-2 w-full py-10'>
           <button
-            className='flex justify-center items-center bg-yellow-300 rounded-4xl h-[60px]'
+            className='flex justify-center items-center bg-yellow-300 rounded-4xl h-[60px] cursor-pointer'
           >
             카카오톡 시작하기
           </button>
           <button
-            className='flex justify-center items-center bg-green-300 rounded-4xl h-[60px]'
+            className='flex justify-center items-center bg-green-300 rounded-4xl h-[60px] cursor-pointer'
           >
             네이버 시작하기
           </button>
           <button
-            className='flex justify-center items-center bg-white border-[1px] border-gray-200 rounded-4xl h-[60px]'
+            className='flex justify-center items-center bg-white border-[1px] border-gray-200 rounded-4xl h-[60px] cursor-pointer'
           >
             구글 시작하기
           </button>
@@ -63,7 +63,7 @@ export default function loginPage() {
             disabled={!isValidEmail}
             className={clsx(
               "flex justify-center items-center rounded-2xl my-5 h-[60px] text-xl font-semibold",
-              isValidEmail ? 'bg-[#DBA39A] text-white' : 'bg-gray-300 text-gray-400'
+              isValidEmail ? 'bg-[#DBA39A] text-white cursor-pointer' : 'bg-gray-300 text-gray-400'
             )}
           >
             시작하기
