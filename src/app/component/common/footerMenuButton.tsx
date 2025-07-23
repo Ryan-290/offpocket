@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-export default function FooterMenu( { href, children } ) {
+type FooterMenuProps = {
+  href : string;
+  children : string;
+}
+
+export default function FooterMenu( { href, children } : FooterMenuProps ) {
 
   return (
     <Link

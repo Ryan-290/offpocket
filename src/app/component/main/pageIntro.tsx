@@ -2,14 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 
-export default function PageIntro({ linkto, src, title, desc, href }) {
+export type PageIntroProps = {
+  alt : string;
+  src : string;
+  title : string;
+  desc : React.ReactNode;
+  href : string;
+}
+
+export default function PageIntro({ alt, src, title, desc, href } : PageIntroProps ) {
 
   return (
     <div className='grid grid-cols-3 items-center py-5 md:py-10'>
       <div className='relative p-0 lg:p-8'>
         <div className='hidden sm:block sm:col-span-1 relative w-full aspect-[500/500] rounded-4xl overflow-hidden'>
           <Image
-            alt={linkto}
+            alt={alt}
             src={src}
             fill
             className="object-contain"
@@ -29,7 +37,7 @@ export default function PageIntro({ linkto, src, title, desc, href }) {
             className="flex space-x-1 md:space-x-2 items-center w-fit p-3 md:p-4 bg-[#C1776D] rounded-3xl text-white transition-transform duration-200 hover:scale-105"
           >
             <div className='text-xs sm:text-base md:text-lg lg:text-xl'>
-              {linkto}
+              {alt}
             </div>
             <IoIosArrowForward />
           </Link>

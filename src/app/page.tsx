@@ -1,5 +1,5 @@
-import Features from "@/component/main/features";
-import PageIntro from "@/component/main/pageIntro";
+import Features from "@/app/component/main/features";
+import PageIntro from "@/app/component/main/pageIntro";
 import Image from "next/image";
 
 
@@ -125,7 +125,7 @@ export default function Home() {
         {pageIntro.map(item => (
           <PageIntro
             key={item.id}
-            linkto={item.to}
+            alt={item.to}
             src={item.image}
             title={item.title}
             desc={item.desc}

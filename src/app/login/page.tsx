@@ -1,11 +1,11 @@
 "use client";
 
-import GoogleLoginButton from "@/component/login/googleLoginButton";
-import KakaoLoginButton from "@/component/login/kakaologin";
-import NaverLoginButton from "@/component/login/naverLoginButton";
+import GoogleLoginButton from "@/app/component/login/googleLoginButton";
+import KakaoLoginButton from "@/app/component/login/kakaologin";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
+import LoginButton from "../component/login/login";
 
 
 export default function loginPage() {
@@ -30,11 +30,7 @@ export default function loginPage() {
             <p>소소한 설렘의 시작</p>
           </div>
         </div>
-        <div className='flex flex-col space-y-4 w-full py-10'>
-          <KakaoLoginButton/>
-          <NaverLoginButton/>
-          <GoogleLoginButton/>
-        </div>
+       <LoginButton/>
 
         {/* <div className='flex flex-col space-y-4'>
           <div className='flex space-x-2 items-center w-full text-gray-400 text-sm'>
