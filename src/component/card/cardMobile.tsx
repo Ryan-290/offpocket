@@ -2,11 +2,16 @@ import { OffpickContent } from '@/type/content';
 import Image from 'next/image'
 import Link from 'next/link';
 
-export default function OffpickCard({
+export default function OffpickCardMobile({
   content
 }: {
   content: OffpickContent;
 }) {
+
+  const formatDate = (dateStr: string) => {
+  const [_, month, day] = dateStr.split("-");
+  return `${month}.${day}`;
+};
 
   const baseURL = "https://pzwfxlohnoiemrlczoyt.supabase.co/storage/v1/object/public/offpick-images//"
 
@@ -16,7 +21,7 @@ export default function OffpickCard({
       className='flex flex-col px-4 py-4 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105'
     >
       {/* 이미지 */}
-      <div className='relative w-full h-[240px] rounded-3xl overflow-hidden'>
+      <div className='relative w-full h-[200px] rounded-3xl overflow-hidden'>
         <Image
           alt="thumbnail"
           src={baseURL + content.thumbnail_url}
@@ -34,7 +39,7 @@ export default function OffpickCard({
       </div>
       {/* 기간, 시간 */}
       <div className='px-2  text-gray-400'>
-        {content.start_date}~{content.end_date}, {content.time}
+        {formatDate(content.start_date)}~{formatDate(content.end_date)}, {content.time}
       </div>
 
     </Link>

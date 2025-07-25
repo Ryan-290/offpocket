@@ -4,8 +4,14 @@ import { GoHeartFill, GoHeart } from "react-icons/go";
 import BackButton from '@/component/common/backButton';
 import ImageCarousel from '@/component/card/ImageCarousel';
 
-export default async function OffpickDetailPage({ params }: { params: { id: string } }) {
-  const { id } = params
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default async function OffpickDetailPage({ params }: PageProps ) {
+  const { id } = params;
 
   const { data, error } = await supabase
     .from('offpick_contents')
@@ -17,9 +23,6 @@ export default async function OffpickDetailPage({ params }: { params: { id: stri
     return <div className="p-4">❌ 콘텐츠를 찾을 수 없습니다.</div>
   }
 
-  const baseURL = "https://pzwfxlohnoiemrlczoyt.supabase.co/storage/v1/object/public/offpick-images//";
-  const fullThumbnailURL = baseURL + data.thumbnail_url;
-
   return (
     <main className='flex-1 max-w-[1000px] mx-auto px-4'>
       <div className='flex flex-col'>
@@ -28,14 +31,14 @@ export default async function OffpickDetailPage({ params }: { params: { id: stri
           <BackButton />
         </div>
         {/* 이미지 - 캐러셀로 개발 예정 */}
-        <div className='w-full aspect-[2/1] overflow-hidden'>
+        <div className='relative w-full overflow-hidden'>
             <ImageCarousel
               thumbnail_url={data.thumbnail_url}
               image_urls={data.image_urls}
             />
         </div>
         {/* 버튼 */}
-        <div className='flex justify-end space-x-2 sm:space-x-4 py-5 mx-2'>
+        <div className='flex justify-end space-x-2 sm:space-x-4 py-3 sm:py-5 mx-2'>
           <GoHeartFill className='w-[20px] sm:w-[35px] h-[20px] sm:h-[35px] text-red-500' />
           <RiBookmarkFill className='w-[20px] sm:w-[35px] h-[20px] sm:h-[35px] text-sky-500' />
         </div>

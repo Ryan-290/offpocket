@@ -1,4 +1,5 @@
-import OffpickCard from '@/component/card/card'
+import OffpickCardMobile from '@/component/card/cardMobile';
+import OffpickCardWeb from '@/component/card/cardWeb';
 import { supabase } from '@/lib/supabase/client';
 
 export const dynamic = 'force-dynamic';
@@ -16,25 +17,47 @@ export default async function OffContentPage() {
   return (
     <main className="flex-1">
       <div className="max-w-7xl mx-auto px-4">
-        {/* 필터링 바 */}
-        <div className='text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#c1776d] font-bold py-10'>
-          놓치면 아쉬운 OFF PICK!
+        {/* 데스크탑일 때 */}
+        <div className='sm:block hidden w-[1250px]'>
+          <div className=''>
+            필터링 바
+          </div>
+          <div className='grid grid-cols-3'>
+            <div className='col-span-2 bg-gray-300'>
+              지도
+            </div>
+            <div className='col-span-1 flex flex-col h-[800px] overflow-y-auto mx-2 gap-y-4'>
+              {contents.map(item => (
+                <OffpickCardWeb
+                  key={item.id}
+                  content={item}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-        <div className='bg-red-200'>
-          필터링
-        </div>
-        {/* 지도 */}
-        <div className='w-full aspect-[2/1] bg-gray-300 py-10 '>
-          지도
-        </div>
-        {/* 콘텐츠프레임 */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4'>
-          {contents.map(item => (
-            <OffpickCard
-              key={item.id}
-              content={item}
-            />
-          ))}
+        {/* 모바일 일때 */}
+        <div className='sm:hidden blocks'>
+          <div className='sticky top-[47px] z-50'>
+            {/* 필터링 바 */}
+            <div className='bg-red-200'>
+              필터링
+            </div>
+            {/* 지도 */}
+            <div className='w-full aspect-[2/1] bg-gray-300 py-10 '>
+              지도
+            </div>
+            <div className='w-full h-[16px] bg-white border-b-[1px] border-gray-200'></div>
+          </div>
+          {/* 콘텐츠프레임 */}
+          <div className='flex flex-col py-4 gap-x-4 gap-y-4'>
+            {contents.map(item => (
+              <OffpickCardMobile
+                key={item.id}
+                content={item}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </main>
