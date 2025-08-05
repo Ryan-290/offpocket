@@ -3,6 +3,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gray10: #F0F0F0;
+  --gray20: #E4E4E4;
+  --gray30: #D8D8D8;
+  --gray40: #C6C6C6;
+  --gray50: #8E8E8E;
+  --gray50-rgb: 142, 142, 142;
+  --gray60: #717171;
+  --gray70: #555555;
+  --gray80: #2D2D2D;
+  --gray90: #1D1D1D;
+  --text : #2E2E2E;
+  --rose : #DBA39A;
+  --peach : #FFE6D0 ;
+  --err : #ff3636;
 }
 
 @theme inline {
@@ -23,4 +37,71 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, p {
+    margin : 0 ;
+}
+
+.head1 {
+    font-size: 32px;
+    font-family: 'pretendard';
+    font-weight: 700;
+    letter-spacing: -0.96px;
+    display : block;
+}
+
+.head2 {
+    font-size: 28px;
+    font-family: 'pretendard';
+    font-weight: 700;
+    letter-spacing: -0.84px;
+    display : block;
+}
+
+.head3 {
+    font-size: 26px;
+    font-family: 'pretendard';
+    font-weight: 700;
+    letter-spacing: -0.65px;
+    display : block;
+}
+
+.head4 {
+    font-size: 24px;
+    font-family: 'pretendard';
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    display : block;
+}
+
+.head5 {
+    font-size: 20px;
+    font-family: 'pretendard';
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.body1 {
+    font-size: 18px;
+    font-family: 'pretendard';
+    font-weight: 500;
+    letter-spacing: -0.18px;
+    display : block;
+}
+
+.body2 {
+    font-size: 16px;
+    font-family: 'pretendard';
+    font-weight: 500;
+    letter-spacing: -0px;
+    display : block;
+}
+
+.body3 {
+    font-size: 14px;
+    font-family: 'pretendard';
+    font-weight: 500;
+    letter-spacing: -0px;
+    display : block;
 }
