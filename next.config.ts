@@ -1,8 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   images: {
-    domains: ['pzwfxlohnoiemrlczoyt.supabase.co'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'pzwfxlohnoiemrlczoyt.supabase.co',
+        pathname: '/**', // 모든 경로 허용
+      },
+    ],
   },
 };
 

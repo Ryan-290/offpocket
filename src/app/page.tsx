@@ -1,5 +1,5 @@
-import Features from "@/component/main/features";
-import PageIntro from "@/component/main/pageIntro";
+import Features from "@/component/home/features";
+import PageIntro from "@/component/home/pageIntro";
 import Image from "next/image";
 
 

@@ -1,8 +1,9 @@
 import OffpickCardMobile from '@/component/card/cardMobile';
 import OffpickCardWeb from '@/component/card/cardWeb';
+import dynamic from 'next/dynamic'
 import { supabase } from '@/lib/supabase/client';
+import MapContent from '@/component/offpick/mapContent';
 
-export const dynamic = 'force-dynamic';
 
 export default async function OffContentPage() {
 
@@ -19,22 +20,13 @@ export default async function OffContentPage() {
       <div className="max-w-7xl mx-auto px-4">
         {/* 데스크탑일 때 */}
         <div className='sm:block hidden w-[1250px]'>
-          <div className=''>
+          {/* 필터링 바 */}
+          {/* <div className=''>
             필터링 바
-          </div>
-          <div className='grid grid-cols-3'>
-            <div className='col-span-2 bg-gray-300'>
-              지도
-            </div>
-            <div className='col-span-1 flex flex-col h-[800px] overflow-y-auto mx-2 gap-y-4'>
-              {contents.map(item => (
-                <OffpickCardWeb
-                  key={item.id}
-                  content={item}
-                />
-              ))}
-            </div>
-          </div>
+          </div> */}
+          <MapContent
+            contents={contents}
+          />
         </div>
         {/* 모바일 일때 */}
         <div className='sm:hidden blocks'>
