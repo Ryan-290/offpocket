@@ -28,7 +28,7 @@ export default async function OffContentPage() {
         </div>
         {/* 모바일 일때 */}
         <div className='sm:hidden blocks'>
-          <div className='sticky top-[47px] z-50'>
+          {/* <div className='sticky top-[47px] z-50'> */}
             {/* 필터링 바 */}
             {/* <div className='bg-red-200'>
               필터링
