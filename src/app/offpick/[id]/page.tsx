@@ -1,6 +1,6 @@
 import { supabase } from '@/lib/supabase/client'
-import { RiBookmarkLine, RiBookmarkFill } from "react-icons/ri";
-import { GoHeartFill, GoHeart } from "react-icons/go";
+// import { RiBookmarkLine, RiBookmarkFill } from "react-icons/ri";
+// import { GoHeartFill, GoHeart } from "react-icons/go";
 import BackButton from '@/component/common/backButton';
 import ImageCarousel from '@/component/card/ImageCarousel';
 
@@ -38,12 +38,12 @@ export default async function OffpickDetailPage({ params }: PageProps ) {
             />
         </div>
         {/* 버튼 */}
-        <div className='flex justify-end space-x-2 sm:space-x-4 py-3 sm:py-5 mx-2'>
+        {/* <div className='flex justify-end space-x-2 sm:space-x-4 py-3 sm:py-5 mx-2'>
           <GoHeartFill className='w-[20px] sm:w-[35px] h-[20px] sm:h-[35px] text-red-500' />
           <RiBookmarkFill className='w-[20px] sm:w-[35px] h-[20px] sm:h-[35px] text-sky-500' />
-        </div>
+        </div> */}
         {/* 타이틀 */}
-        <div className='text-xl sm:text-3xl font-semibold'>
+        <div className='text-xl sm:text-3xl font-semibold py-3 sm:py-5'>
           {data.title}
         </div>
         {/* 기간 + 시간 */}

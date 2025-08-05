@@ -1,8 +1,7 @@
 'use client'
 import dynamic from 'next/dynamic'
 import OffpickCardWeb from '@/component/card/cardWeb';
-import { useState, useEffect } from 'react';
-import DateFilterBar from './dateFilterBar';
+import { useState } from 'react';
 
 interface Content {
   id: string

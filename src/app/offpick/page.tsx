@@ -1,6 +1,4 @@
 import OffpickCardMobile from '@/component/card/cardMobile';
-import OffpickCardWeb from '@/component/card/cardWeb';
-import dynamic from 'next/dynamic'
 import { supabase } from '@/lib/supabase/client';
 import MapContent from '@/component/offpick/mapContent';
 
