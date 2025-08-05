@@ -1,7 +1,7 @@
 'use client'
 import dynamic from 'next/dynamic'
 import OffpickCardWeb from '@/component/card/cardWeb';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { OffpickContent } from '@/type/content';
 
 interface MapViewerProps {
@@ -21,8 +21,14 @@ export default function MapContent({ contents }: MapViewerProps) {
       <div className='grid grid-cols-3 py-4'>
         <div className='col-span-2'>
           <MapViewer
-            contents={contents} // 날짜 필터 적용된 데이터로 지도 표시
-            onVisibleChange={(visible) => setMapFiltered(visible as OffpickContent[])} // 지도 범위 필터
+            contents={contents}
+            onVisibleChange={(visible) => {
+              setMapFiltered((prev) => {
+                const isSame = prev.length === visible.length && prev.every((item, index) => item.id === visible[index]?.id);
+                if (isSame) return prev;
+                return visible as OffpickContent[];
+              });
+            }}
           />
         </div>
         <div className='col-span-1 flex flex-col h-[800px] overflow-y-auto mx-2 gap-y-4'>
