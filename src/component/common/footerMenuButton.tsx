@@ -1,6 +1,12 @@
 import Link from "next/link";
+import React from 'react';
 
-export default function FooterMenu( { href, children } ) {
+type props = {
+  href : string,
+  children : React.ReactNode
+}
+
+export default function FooterMenu( { href, children } : props ) {
 
   return (
     <Link

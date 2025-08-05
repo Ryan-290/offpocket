@@ -3,9 +3,14 @@
 import clsx from "clsx"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import React from 'react';
 
+type props = {
+  href : string,
+  children : React.ReactNode
+}
 
-export default function MenuButton( {children, href} ) {
+export default function MenuButton( {children, href} : props) {
 
   const pathname = usePathname();
 

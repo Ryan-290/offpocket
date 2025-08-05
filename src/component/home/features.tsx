@@ -1,6 +1,14 @@
 import Image from "next/image";
+import React from 'react';
 
-export default function Features( {alt, src, title, desc} ) {
+type props = {
+  alt : string,
+  src : string,
+  title : string,
+  desc : React.ReactNode
+}
+
+export default function Features( {alt, src, title, desc} : props) {
 
   return (
     <div>

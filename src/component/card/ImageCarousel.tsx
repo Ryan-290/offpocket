@@ -1,6 +1,7 @@
 'use client';
 
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 import { useState, useMemo } from 'react';
 
 const baseURL = "https://pzwfxlohnoiemrlczoyt.supabase.co/storage/v1/object/public/offpick-images//";
@@ -31,7 +32,7 @@ export default function ImageCarousel({ thumbnail_url, image_urls }:CarouselProp
               key={idx}
               className="flex-[0_0_100%] aspect-[2/1] flex items-center justify-center"
             >
-              <img
+              <Image
                 src={baseURL + url}
                 alt={`slide-${idx}`}
                 className="w-full h-full object-cover"
