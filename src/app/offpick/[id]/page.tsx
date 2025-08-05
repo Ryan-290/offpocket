@@ -4,14 +4,10 @@ import { supabase } from '@/lib/supabase/client'
 import BackButton from '@/component/common/backButton';
 import ImageCarousel from '@/component/card/ImageCarousel';
 
-type PageProps = {
-  params: {
-    id: string;
-  };
-};
+type PageParams = Promise<{ id: string }>;
 
-export default async function OffpickDetailPage({ params }: PageProps ) {
-  const { id } = params;
+export default async function OffpickDetailPage({ params }: { params: PageParams } ) {
+  const { id } = await params;
 
   const { data, error } = await supabase
     .from('offpick_contents')

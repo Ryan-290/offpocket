@@ -9,7 +9,7 @@ export default function OffpickCardWeb({
 }) {
 
   const formatDate = (dateStr: string) => {
-    const [_, month, day] = dateStr.split("-");
+    const [, month, day] = dateStr.split("-");
     return `${month}.${day}`;
   };
 

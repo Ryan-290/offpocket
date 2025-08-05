@@ -54,7 +54,7 @@ export default function MapViewer({ contents, onVisibleChange }: MapViewerProps)
     })
 
     setMap(mapInstance)
-  }, [scriptLoaded])
+  }, [scriptLoaded, map])
 
   // 마커 + 클러스터 + 이벤트 처리
   useEffect(() => {
@@ -138,7 +138,7 @@ export default function MapViewer({ contents, onVisibleChange }: MapViewerProps)
     return () => {
       clusterer.clear()
     }
-  }, [map, contents])
+  }, [map, contents ,onVisibleChange])
 
   return <div ref={mapRef} className="w-full h-[800px] bg-gray-300" />
 }

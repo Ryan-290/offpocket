@@ -1,8 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
+import React from 'react';
 
-export default function PageIntro({ linkto, src, title, desc, href }) {
+type props = {
+  href : string,
+  src : string,
+  title : string,
+  desc : React.ReactNode,
+  linkto : string
+}
+
+export default function PageIntro({ linkto, src, title, desc, href } : props ) {
 
   return (
     <div className='grid grid-cols-3 items-center py-5 md:py-10'>
