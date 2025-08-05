@@ -32,8 +32,9 @@ export default function MapViewer({ contents, onVisibleChange }: MapViewerProps)
       return
     }
 
+
     const script = document.createElement('script')
-    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=6586051a28aa3ecbdb98c27923629ee0&autoload=false&libraries=clusterer`
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_MAP_KEY}&autoload=false&libraries=clusterer`
     script.async = true
     script.onload = () => {
       window.kakao.maps.load(() => {
