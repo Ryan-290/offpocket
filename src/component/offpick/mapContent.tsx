@@ -1,7 +1,7 @@
 'use client'
 import dynamic from 'next/dynamic'
 import OffpickCardWeb from '@/component/card/cardWeb';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { OffpickContent } from '@/type/content';
 
 interface MapViewerProps {
