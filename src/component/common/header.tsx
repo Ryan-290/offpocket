@@ -2,11 +2,9 @@ import Image from "next/image"
 import MenuButton from "@/component/common/MenuButton"
 import Link from "next/link"
 import HeaderMobile from "./headerMobile";
-import { cookies } from 'next/headers';
-import { createClient } from '@supabase/supabase-js';
-import LogoutButton from "../login/logoutButton";
-export const dynamic = "force-dynamic"
 
+
+export const dynamic = "force-dynamic"
 
 export default function Header() {
 

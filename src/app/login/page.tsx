@@ -1,17 +1,9 @@
 "use client";
 
-import GoogleLoginButton from "@/component/login/googleLoginButton";
-import KakaoLoginButton from "@/component/login/kakaologin";
-import NaverLoginButton from "@/component/login/naverLoginButton";
-import clsx from "clsx";
 import Image from "next/image";
-import { useState } from "react";
 
 
 export default function loginPage() {
-
-  const [inputEmail, setInputEmail] = useState('');
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputEmail);
 
   return (
     <main className="flex-1">
