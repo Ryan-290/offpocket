@@ -28,17 +28,17 @@ export default async function OffContentPage() {
         </div>
         {/* 모바일 일때 */}
         <div className='sm:hidden blocks'>
-          <div className='sticky top-[47px] z-50'>
+          {/* <div className='sticky top-[47px] z-50'> */}
             {/* 필터링 바 */}
-            <div className='bg-red-200'>
+            {/* <div className='bg-red-200'>
               필터링
-            </div>
+            </div> */}
             {/* 지도 */}
-            <div className='w-full aspect-[2/1] bg-gray-300 py-10 '>
+            {/* <div className='w-full aspect-[2/1] bg-gray-300 py-10 '>
               지도
             </div>
             <div className='w-full h-[16px] bg-white border-b-[1px] border-gray-200'></div>
-          </div>
+          </div> */}
           {/* 콘텐츠프레임 */}
           <div className='flex flex-col py-4 gap-x-4 gap-y-4'>
             {contents.map(item => (

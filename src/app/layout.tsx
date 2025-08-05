@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://offpocket.vercel.app/og_thumnail.png',
+        url: 'https://offpocket.vercel.app/og_thumbnail.png',
         width: 1200,
         height: 630,
         alt: '대표 이미지',
