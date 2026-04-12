@@ -6,18 +6,13 @@ export default function Footer() {
   const menu = [
     {
       id: 1,
-      name: "Home",
+      name: "Explore",
       href: "/",
     },
     {
       id: 2,
-      name: "OFF PICK!",
-      href: "/offpick",
-    },
-    {
-      id: 3,
-      name: "OFF 먹킷리스트",
-      href: "/eating",
+      name: "About",
+      href: "/about",
     },
     {
       id: 4,

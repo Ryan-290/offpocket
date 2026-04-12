@@ -27,8 +27,8 @@ export default function Header() {
         <div className='hidden md:flex justify-between w-full pl-40 mr-4 md:mr-0'>
           {/* 메뉴 버튼 */}
           <div className='flex justify-center items-center space-x-8'>
-            <MenuButton href="/offpick">OFF PICK !</MenuButton>
-            <MenuButton href="/eating">OFF 먹킷리스트</MenuButton>
+            <MenuButton href="/">Explore</MenuButton>
+            <MenuButton href="/about">About</MenuButton>
           </div>
           {/* 로그인 / 마이페이지 버튼 */}
           {/* <MenuButton href="/login">로그인</MenuButton> */}

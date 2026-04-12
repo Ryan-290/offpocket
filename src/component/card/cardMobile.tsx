@@ -17,7 +17,7 @@ export default function OffpickCardMobile({
 
   return (
     <Link
-      href={`/offpick/${content.id}`}
+      href={`/place/${content.id}`}
       className='flex flex-col px-4 py-4 rounded-2xl shadow-md transition-transform duration-300 hover:scale-105'
     >
       {/* 이미지 */}

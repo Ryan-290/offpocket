@@ -38,14 +38,14 @@ export default function HeaderMobile() {
         {/* 메뉴 리스트 */}
         <div className='flex flex-col px-8 py-4 space-y-4 text-sm'>
           <MenuButton
-            href="/offpick"
+            href="/"
           >
-            OFF PICK !
+            Explore
           </MenuButton>
           <MenuButton
-            href="/eating"
+            href="/about"
           >
-            OFF 먹킷리스트
+            About
           </MenuButton>
           {/* <MenuButton
             href="/login"

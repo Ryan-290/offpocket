@@ -17,7 +17,7 @@ export default function OffpickCardWeb({
 
   return (
     <Link
-      href={`/offpick/${content.id}`}
+      href={`/place/${content.id}`}
       className='flex flex-col px-4 py-4 rounded-2xl border-[0.5px] border-gray-100 shadow-md transition-transform duration-300 hover:scale-102'
     >
       <div className='flex items-center'>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/component/common/header";
-import Footer from "@/component/common/footer";
 
 export const metadata: Metadata = {
   title: '일상 OFF, OFFPICK',
@@ -32,11 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className="flex flex-col min-h-screen">
         <Header/>
         {children}
-        <Footer/>
       </body>
     </html>
   );
